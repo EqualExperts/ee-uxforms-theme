@@ -1,0 +1,15 @@
+    <header>
+      <nav role="navigation" class="progress-indicator">
+        <ol>
+            {{ #prevSections }}
+              <li class="active"><a data-nav-position="{{index}} of {{sectionCount}}" href="{{url}}">{{title}}</a></li>
+            {{ /prevSections }}
+
+            <li class="current"><a data-nav-position="{{currentIndex}} of {{sectionCount}}">{{currentTitle}} <span class="visuallyhidden"> - {{currentStepText}}</span></a></li>
+
+            {{ #laterSections }}
+              <li class="inactive"><a data-nav-position="{{index}} of {{sectionCount}}">{{title}}</a></li>
+            {{ /laterSections }}
+        </ol>
+      </nav>
+    </header>

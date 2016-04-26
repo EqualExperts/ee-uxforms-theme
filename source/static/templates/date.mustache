@@ -1,0 +1,18 @@
+    <div class="form-date">
+      <div class="form-group form-group-day">
+        <label for="{{id}}_day">{{dayLabel}}</label>
+        <input class="form-control" id="{{id}}_day" type="number" min="1" max="31" maxlength="2" name="{{dayField}}" value="{{day}}"/>
+      </div>
+      <div class="form-group form-group-month">
+          <label for="{{id}}_month">{{monthLabel}}</label>
+          <input class="form-control" id="{{id}}_month" type="number" min="1" max="12" maxlength="2" name="{{monthField}}" value="{{month}}"/>
+      </div>
+      <div class="form-group form-group-year">
+          <label for="{{id}}_year">{{yearLabel}}</label>
+          <input class="form-control" id="{{id}}_year" type="number" maxlength="4" name="{{yearField}}" value="{{year}}"
+            {{#maxYear}} max="{{maxYear}}" {{/maxYear}}
+            {{#minYear}} min="{{minYear}}" {{/minYear}}
+            {{#required}}aria-required="true"{{/required}}
+          />
+      </div>
+    </div>

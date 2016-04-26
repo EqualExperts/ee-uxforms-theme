@@ -1,0 +1,9 @@
+<div>
+	{{#choices}}
+		<label class="block-label {{#selected}} selected {{/selected}}" for="{{id}}_{{value}}">
+			<input id="{{id}}_{{value}}" type="radio" name="{{name}}" value="{{value}}" {{#selected}} checked="checked" {{/selected}}>
+				{{text}}
+      </input>
+		</label>
+	{{/choices}}
+</div>

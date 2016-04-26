@@ -1,0 +1,33 @@
+
+<h1 class="form-title heading-large">{{sectionTitle}}</h1>
+	{{ #hasValidationErrors }}
+		<div class="validation-summary">
+    	<h1 class="form-label-bold">{{ errorTitle }}</h1>
+      	<ol>
+        	{{ #validationErrors }}
+						<li><a href="#{{widgetId}}">{{validationMessage}}</a></li>
+					{{ /validationErrors }}
+				</ol>
+		</div>
+	{{ /hasValidationErrors }}
+
+	<form method="post" action="{{ postAction }}" class="form">
+
+	{{{ widgets }}}
+
+	<button class="button">
+		{{^isLastSection}}
+			{{continueButton}}
+		{{/isLastSection}}
+		{{#isLastSection}}
+			{{submitButton}}
+		{{/isLastSection}}
+	</button>
+
+</form>
+
+<script>
+	$(document).ready(function() {
+		addListeners("{{sectionPath}}/widgetState")
+	})
+</script>

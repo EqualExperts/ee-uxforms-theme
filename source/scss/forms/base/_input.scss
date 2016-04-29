@@ -14,15 +14,22 @@
 
 @import "../../variables";
 @import "../../colors/palette";
-@import "../../icons/UX-forms";
 @import "../../mixins/fonts";
-@import "../../mixins/forms";
 @import "../../mixins/texts";
 @import "../../mixins/gds/css3";
 @import "../../mixins/gds/conditionals";
-@import "../../mixins/utils";
 
 $min-width: 299;
+
+@mixin placeholder {
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
 
 .ux-forms {
   .form-control {

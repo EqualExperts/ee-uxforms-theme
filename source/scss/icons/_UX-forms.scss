@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'UX-forms';
+  src: url('../fonts/UX-forms/UX-forms.eot?edzadz');
+  src: url('../fonts/UX-forms/UX-forms.eot?edzadz#iefix') format('embedded-opentype'),
+  url('../fonts/UX-forms/UX-forms.ttf?edzadz') format('truetype'),
+  url('../fonts/UX-forms/UX-forms.woff?edzadz') format('woff'),
+  url('../fonts/UX-forms/UX-forms.svg?edzadz#UX-forms') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon,
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'UX-forms' !important;
+  speak: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon-control-edit:before {
+  content: "\61";
+}
+
+.icon-icon-control-export:before {
+  content: "\62";
+}
+
+.icon-icon-control-plus:before {
+  content: "\63";
+}
+
+.icon-icon-control-print:before {
+  content: "\64";
+}
+
+.icon-icon-control-selectarrow:before {
+  content: "\65";
+}
+
+.icon-icon-control-trash:before {
+  content: "\66";
+}
+
+.icon-icon-control-viewdashboard:before {
+  content: "\67";
+}
+
+.icon-icon-control-viewform:before {
+  content: "\68";
+}
+
+.icon-icon-misc-error:before {
+  content: "\69";
+}
+
+.icon-icon-misc-tick:before {
+  content: "\6a";
+}
+
+.icon-icon-nav-dashboards:before {
+  content: "\6b";
+}
+
+.icon-icon-nav-forms:before {
+  content: "\6c";
+}
+
+.icon-icon-nav-payment:before {
+  content: "\6d";
+}
+
+.icon-icon-nav-profile:before {
+  content: "\6e";
+}
+
+.icon-icon-nav-users:before {
+  content: "\6f";
+}
+
+.icon-icon-nav-signout:before {
+  content: "\70";
+}

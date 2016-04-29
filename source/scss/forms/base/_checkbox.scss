@@ -1,0 +1,106 @@
+// Checkbox
+//
+// Some description here
+//
+// Markup:
+//  <form class="ux-forms">
+//    <div class="form-group">
+//      <input class="form-control {{modifier_class}}" id="checkbox" type="checkbox">
+//      <label class="form-label" for="checkbox">Yes</label>
+//    </div>
+//  </form>
+//
+// :focus       - some description
+// :active      - some description
+// :checked     - some description
+// :disabled    - some description
+//
+// Style guide: UXForms.Element.checkbox
+
+@import "../../variables";
+@import "../../colors/palette";
+@import "../../icons/UX-forms";
+@import "../../mixins/fonts";
+@import "../../mixins/forms";
+@import "../../mixins/texts";
+@import "../../mixins/gds/css3";
+@import "../../mixins/gds/conditionals";
+@import "../../mixins/utils";
+
+.ux-forms {
+
+  [type="checkbox"] {
+    &:not(:checked),
+    &:checked {
+      position: absolute;
+      left: -9999px;
+      + label {
+        position: relative;
+        padding-left: 30px;
+        padding-right: 15px;
+        cursor: pointer;
+        &:before {
+          @include border-radius(2px);
+          content: '';
+          position: absolute;
+          left: 0;
+          top: -2px;
+          width: 18px;
+          height: 18px;
+          border: 1px solid $heather;
+          background: $white;
+        }
+
+        &:after {
+          @extend .icon;
+          content: "\6a";
+          position: absolute;
+          top: -8px;
+          left: 2px;
+          font-size: 22px;
+          color: $sick-green;
+        }
+      }
+    }
+  }
+
+  [type="checkbox"] {
+    &:not(:checked) {
+      + label {
+        &:after {
+          @include opacity(0);
+        }
+      }
+    }
+
+    &:checked {
+      + label {
+        &:after {
+          @include opacity(1);
+        }
+      }
+    }
+
+    &:disabled {
+      &:not(:checked),
+      &:checked {
+        + label {
+          cursor: default;
+          &:before {
+            @include opacity(0.7);
+          }
+        }
+      }
+      &:checked {
+        + label {
+          &:after {
+            @include opacity(0.7);
+          }
+        }
+      }
+      + label {
+        @include opacity(0.7);
+      }
+    }
+  }
+}

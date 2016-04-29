@@ -1,0 +1,57 @@
+@import "../variables";
+@import "gds/css3";
+@import "gds/conditionals";
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin viewport-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  @include translate(-50%, -50%)
+}
+
+@mixin full-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+@mixin hr ($color, $size: 1px) {
+  &:after {
+    @include media(mobile) {
+      margin: 0 $mobile-gutter-half;
+    }
+    margin: 0 $gutter-half;
+    border-bottom: solid $size $color;
+    content: '';
+    display: block;
+  }
+}
+
+@mixin offsetNavBar {
+  @include media(mobile) {
+    padding-left: 0;
+  }
+  padding-left: 80px;
+}

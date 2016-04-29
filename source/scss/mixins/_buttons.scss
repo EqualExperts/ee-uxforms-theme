@@ -1,0 +1,39 @@
+@import "gds/css3";
+
+@mixin button(
+  $bg-color: false,
+  $border-color: false,
+  $box-shadow: false,
+  $color: false,
+  $text-shadow: false
+) {
+
+  @if $bg-color != false {
+    background-color: $bg-color;
+  }
+
+  @if $border-color != false {
+    border: solid 1px $border-color;
+  } @else {
+    border: solid 1px transparent;
+  }
+
+  @if $box-shadow != false {
+    @include box-shadow(inset 0 -4px 0 0 $box-shadow);
+  }
+
+  @if $color != false {
+    color: $color;
+  }
+
+  @if $text-shadow != false {
+    text-shadow: 0 1px 1px $text-shadow;
+  }
+}
+
+@mixin button-group-border-color($border-color){
+  [class^="icon-"],
+  [class*=" icon-"] {
+    border-left-color: $border-color;
+  }
+}

@@ -1,0 +1,28 @@
+// Legend
+//
+// Some description here
+//
+// Markup:
+//  <form class="ux-forms">
+//    <legend>Login Form</legend>
+//  </form>
+//
+// Style guide: UXForms.Element.legend
+
+@import "../../variables";
+@import "../../colors/palette";
+@import "../../icons/UX-forms";
+@import "../../mixins/fonts";
+@import "../../mixins/texts";
+
+.ux-forms {
+  legend {
+    @include font-regular;
+    @include text-base;
+    border-bottom: solid 3px $light-grey;
+    padding-bottom: 15px;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+  }
+}

@@ -1,0 +1,74 @@
+// File
+//
+// Some description here
+//
+// Markup:
+//  <form class="ux-forms">
+//    <input class="form-control {{modifier_class}}" type="file">
+//  </form>
+//
+// :focus       - some description
+// :active      - some description
+//
+// Style guide: UXForms.Element.file
+
+@import "../../variables";
+@import "../../colors/palette";
+@import "../../icons/UX-forms";
+@import "../../mixins/fonts";
+@import "../../mixins/forms";
+@import "../../mixins/texts";
+@import "../../mixins/gds/css3";
+@import "../../mixins/gds/conditionals";
+@import "../../mixins/utils";
+
+.ux-forms {
+  [type="file"] i {
+    color: transparent;
+    &:before {
+      @include font-regular;
+      @include text-muted;
+      content: 'Select file';
+    }
+  }
+
+  [type="file"] {
+    &::-ms-value {
+      @include font-medium;
+      @include border-radius(2px);
+      font-size: $font-size;
+      color: transparent;
+      border: none;
+      outline: none;
+    }
+    &::-ms-browse {
+      @include font-medium;
+      @include border-radius(2px);
+      background-color: $gunmetal;
+      font-size: $font-size;
+      color: $white;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+      margin-right: -10px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+      padding: 5px 20px;
+      float: right;
+      border: none;
+      outline: none;
+    }
+    &::-webkit-file-upload-button {
+      @include font-medium;
+      @include border-radius(2px);
+      background-color: $gunmetal;
+      font-size: $font-size;
+      color: $white;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+      margin-right: -10px;
+      margin-bottom: -10px;
+      margin-top: -10px;
+      padding: 10px 20px;
+      float: right;
+      border: none;
+    }
+  }
+}

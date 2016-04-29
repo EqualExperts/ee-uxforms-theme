@@ -1,0 +1,57 @@
+// Label
+//
+// Some description here
+//
+// Markup:
+//  <form class="ux-forms">
+//    <label class="form-label" for="full-name">Full name</label>
+//  </form>
+//
+// Style guide: UXForms.Element.label
+
+@import "../../variables";
+@import "../../colors/palette";
+@import "../../icons/UX-forms";
+@import "../../mixins/fonts";
+@import "../../mixins/forms";
+@import "../../mixins/texts";
+@import "../../mixins/gds/css3";
+@import "../../mixins/gds/conditionals";
+@import "../../mixins/utils";
+
+.ux-forms {
+
+  .has-error {
+    .form-label {
+      @include font-bold;
+      @include text-danger;
+      .form-hint {
+        display: inline-block;
+      }
+    }
+
+    .form-hint {
+      @include text-danger;
+    }
+  }
+
+  .form-label {
+    @include font-regular;
+    @include text-muted;
+    font-size: $font-size;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+    min-width: 85px;
+    margin-right: 15px;
+    .form-hint {
+      display: none;
+    }
+  }
+
+  .form-hint {
+    @include font-medium;
+    @include text-muted;
+    font-size: $font-size;
+  }
+}

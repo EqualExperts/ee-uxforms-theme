@@ -1,9 +1,9 @@
-@import "../../variables";
-@import "../../color";
-@import "../../mixins/fonts";
-@import "../../mixins/texts";
-@import "../../mixins/buttons";
-@import "../../../mixins/css3";
+@import '../../variables';
+@import '../../color';
+@import '../../mixins/fonts';
+@import '../../mixins/texts';
+@import '../../mixins/buttons';
+@import '../../../css3';
 
 .button {
   @include font-regular;

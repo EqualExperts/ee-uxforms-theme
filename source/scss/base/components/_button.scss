@@ -10,9 +10,9 @@
 // :active      - some description
 // .disabled    - some description
 //
-// Style guide: Component.button
+// Style guide: Button
 
-@import "../../mixins/css3";
+@import '../../css3';
 
 .button {
   @include border-radius(2px);
@@ -49,7 +49,7 @@
   // .button-large - some description
   // .button-small - some description
   //
-  // Style guide: Component.button.size
+  // Style guide: Button.size
   &.button-large {
     padding: 10px 30px;
   }
@@ -68,7 +68,7 @@
   // .button-primary    - some description
   // .button-secondary  - some description
   //
-  // Style guide: Component.button.type
+  // Style guide: Button.type
   &.button-primary {
   }
 

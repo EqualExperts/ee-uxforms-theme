@@ -17,8 +17,8 @@
 //
 // Style guide: Form.checkbox
 
-@import '../../../icons/UX-forms';
-@import '../../../mixins/css3';
+@import '../../../UX-forms';
+@import '../../../css3';
 
 .form-control {
 
@@ -46,7 +46,7 @@
 
         &:after {
           @extend .icon;
-          content: '\6a';
+          @extend .icon-icon-misc-tick;
           position: absolute;
           top: -8px;
           left: 2px;

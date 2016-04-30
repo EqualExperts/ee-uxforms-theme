@@ -2,7 +2,6 @@
 @import '../../../mixins/fonts';
 @import '../../../mixins/texts';
 @import '../../../mixins/form';
-@import '../../../../icons/UX-forms';
 
 .form-control {
   @include font-regular;

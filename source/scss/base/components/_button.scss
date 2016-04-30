@@ -3,7 +3,7 @@
 // Some description here
 //
 // Markup:
-//  <button class="button {{modifier_class}}">Button</button>
+//  <button class="button {{modifier_class}}">Button<i class="icon-icon-control-print"></i></button>
 //
 // :hover       - some description
 // :focus       - some description
@@ -34,10 +34,10 @@
 
   [class^="icon-"],
   [class*=" icon-"] {
-    margin-left: 14px;
-    vertical-align: text-bottom;
+    &:before {
+      padding: 0 5px;
+    }
   }
-
 
   // Sizes
   //
@@ -55,7 +55,7 @@
   }
 
   &.button-small {
-    padding: 6px 10px;
+    padding: 6px 15px;
   }
 
   // Types
@@ -67,16 +67,12 @@
   //
   // .button-primary    - some description
   // .button-secondary  - some description
-  // .button-warning    - some description
   //
   // Style guide: Component.button.type
   &.button-primary {
   }
 
   &.button-secondary {
-  }
-
-  &.button-warning {
     outline: auto 5px;
   }
 }

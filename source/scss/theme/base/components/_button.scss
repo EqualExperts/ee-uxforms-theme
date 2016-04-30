@@ -6,12 +6,40 @@
 @import "../../../mixins/css3";
 
 .button {
+  @include font-regular;
+  @include button(
+          $bg-color: transparent,
+          $border-color: $heather,
+          $color: $heather
+  );
   font-size: $default-font-size;
+
+  &.disabled,
+  &[disabled] {
+    &:hover, &.hover,
+    &:active, &.active {
+      @include button(
+              $border-color: $heather,
+              $color: $heather
+      );
+    }
+  }
+
+  &:hover, &.hover,
+  &:active, &.active {
+    @include button(
+            $border-color: $gunmetal,
+            $color: $gunmetal
+    );
+  }
+
 
   &.disabled,
   &[disabled] {
     @include opacity(0.7);
   }
+
+
 
   &.button-primary {
     @include font-medium;
@@ -36,34 +64,6 @@
     }
   }
 
-  &.button-secondary {
-    @include font-regular;
-    @include button(
-            $bg-color: transparent,
-            $border-color: $heather,
-            $color: $heather
-    );
-
-    &.disabled,
-    &[disabled] {
-      &:hover, &.hover,
-      &:active, &.active {
-        @include button(
-                $border-color: $heather,
-                $color: $heather
-        );
-      }
-    }
-
-    &:hover, &.hover,
-    &:active, &.active {
-      @include button(
-              $border-color: $gunmetal,
-              $color: $gunmetal
-      );
-    }
-  }
-
   //&.button-capsule {
   //  @include font-medium;
   //  @include text-muted;
@@ -83,7 +83,7 @@
   //  }
   //}
 
-  &.button-warning {
+  &.button-secondary {
     outline-color: rgba(255,255,255,0.5);
     @include font-medium;
     @include button(

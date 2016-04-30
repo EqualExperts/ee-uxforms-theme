@@ -1,12 +1,5 @@
 @import "reset";
 
-// Form
-//
-// Some description here
-//
-// Weight: 1
-//
-// Style guide: Form
 @import "base/form/form";
 
 
@@ -19,5 +12,5 @@
 // Style guide: Component
 @import "base/components/error";
 @import "base/components/button";
-//@import "base/components/alert";
-//@import "base/components/progress";
+@import "base/components/progress";
+@import "base/components/tooltip";

@@ -1,5 +1,3 @@
-@import "../../mixins/css3";
-
 // Button
 //
 // Some description here
@@ -13,6 +11,8 @@
 // .disabled    - some description
 //
 // Style guide: Component.button
+
+@import "../../mixins/css3";
 
 .button {
   @include border-radius(2px);

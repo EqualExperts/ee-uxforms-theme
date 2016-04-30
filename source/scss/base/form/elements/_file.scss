@@ -10,7 +10,7 @@
 // :focus       - some description
 // :active      - some description
 //
-// Style guide: Form.Element.file
+// Style guide: Form.file
 
 @import '../../../mixins/css3';
 
@@ -31,7 +31,6 @@
     }
     &::-ms-browse {
       @include border-radius(2px);
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
       margin-right: -10px;
       margin-bottom: -10px;
       margin-top: -10px;
@@ -42,7 +41,6 @@
     }
     &::-webkit-file-upload-button {
       @include border-radius(2px);
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
       margin-right: -10px;
       margin-bottom: -10px;
       margin-top: -10px;

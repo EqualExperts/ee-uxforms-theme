@@ -1,22 +1,21 @@
-@import "../../variables";
-@import "../../colors/palette";
-@import "../../mixins/fonts";
-@import "../../mixins/texts";
-@import "../../mixins/buttons";
-@import "../../mixins/gds/css3";
+@import "../../mixins/css3";
 
 // Button
 //
 // Some description here
 //
 // Markup:
-//  <button class="button button-primary">Button Element</button>
+//  <button class="button {{modifier_class}}">Button</button>
 //
-// Style guide: UXForms.Component.button
+// :hover       - some description
+// :focus       - some description
+// :active      - some description
+// .disabled    - some description
+//
+// Style guide: Component.button
 
 .button {
   @include border-radius(2px);
-  font-size: $font-size;
   white-space: nowrap;
   cursor: pointer;
   padding: 7.5px 20px;
@@ -24,7 +23,6 @@
 
   &.disabled,
   &[disabled] {
-    @include opacity(0.7);
     cursor: default;
   }
 
@@ -40,6 +38,18 @@
     vertical-align: text-bottom;
   }
 
+
+  // Sizes
+  //
+  // Some description here
+  //
+  // Markup:
+  //  <button class="button {{modifier_class}}">Button</button>
+  //
+  // .button-large - some description
+  // .button-small - some description
+  //
+  // Style guide: Component.button.size
   &.button-large {
     padding: 10px 30px;
   }
@@ -48,84 +58,25 @@
     padding: 6px 10px;
   }
 
+  // Types
+  //
+  // Some description here
+  //
+  // Markup:
+  //  <button class="button {{modifier_class}}">Button</button>
+  //
+  // .button-primary    - some description
+  // .button-secondary  - some description
+  // .button-warning    - some description
+  //
+  // Style guide: Component.button.type
   &.button-primary {
-    @include font-medium;
-    @include button(
-            $bg-color: $slate,
-            $box-shadow: rgba(0, 0, 0, 0.26),
-            $color: $light-white,
-            $text-shadow: rgba(0, 0, 0, 0.28)
-    );
-
-    &.disabled,
-    &[disabled] {
-      &:hover, &.hover,
-      &:active, &.active {
-        @include button($bg-color: $slate);
-      }
-    }
-
-    &:hover, &.hover,
-    &:active, &.active {
-      @include button($bg-color: $dark-shadow-grey-blue);
-    }
   }
 
   &.button-secondary {
-    @include font-regular;
-    @include button(
-            $bg-color: transparent,
-            $border-color: $heather,
-            $color: $heather
-    );
-
-    &.disabled,
-    &[disabled] {
-      &:hover, &.hover,
-      &:active, &.active {
-        @include button(
-                $border-color: $heather,
-                $color: $heather
-        );
-      }
-    }
-
-    &:hover, &.hover,
-    &:active, &.active {
-      @include button(
-              $border-color: $gunmetal,
-              $color: $gunmetal
-      );
-    }
-  }
-
-  &.button-capsule {
-    @include font-medium;
-    @include text-muted;
-    @include border-radius(15px);
-    padding: 2px 10px;
-    border: solid 1px $lightest-grey;
-    background-color: $lightest-grey;
-
-    &:active, &.active {
-      @include text-base;
-    }
-
-    &:hover, &.hover {
-      @include text-base;
-      background-color: transparent;
-      border: solid 1px $heather;
-    }
   }
 
   &.button-warning {
-    outline: rgba(255,255,255,0.5) auto 5px;
-    @include font-medium;
-    @include button(
-            $bg-color: darken($wheat, 15%),
-            $box-shadow: rgba(0, 0, 0, 0.16),
-            $color: $white,
-            $text-shadow: rgba(0, 0, 0, 0.28)
-    );
+    outline: auto 5px;
   }
 }

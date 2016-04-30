@@ -1,0 +1,96 @@
+@import "../../variables";
+@import "../../color";
+@import "../../mixins/fonts";
+@import "../../mixins/texts";
+@import "../../mixins/buttons";
+@import "../../../mixins/css3";
+
+.button {
+  font-size: $default-font-size;
+
+  &.disabled,
+  &[disabled] {
+    @include opacity(0.7);
+  }
+
+  &.button-primary {
+    @include font-medium;
+    @include button(
+            $bg-color: $slate,
+            $box-shadow: rgba(0, 0, 0, 0.26),
+            $color: $light-white,
+            $text-shadow: rgba(0, 0, 0, 0.28)
+    );
+
+    &.disabled,
+    &[disabled] {
+      &:hover, &.hover,
+      &:active, &.active {
+        @include button($bg-color: $slate);
+      }
+    }
+
+    &:hover, &.hover,
+    &:active, &.active {
+      @include button($bg-color: $dark-shadow-grey-blue);
+    }
+  }
+
+  &.button-secondary {
+    @include font-regular;
+    @include button(
+            $bg-color: transparent,
+            $border-color: $heather,
+            $color: $heather
+    );
+
+    &.disabled,
+    &[disabled] {
+      &:hover, &.hover,
+      &:active, &.active {
+        @include button(
+                $border-color: $heather,
+                $color: $heather
+        );
+      }
+    }
+
+    &:hover, &.hover,
+    &:active, &.active {
+      @include button(
+              $border-color: $gunmetal,
+              $color: $gunmetal
+      );
+    }
+  }
+
+  //&.button-capsule {
+  //  @include font-medium;
+  //  @include text-muted;
+  //  @include border-radius(15px);
+  //  padding: 2px 10px;
+  //  border: solid 1px $lightest-grey;
+  //  background-color: $lightest-grey;
+  //
+  //  &:active, &.active {
+  //    @include text-base;
+  //  }
+  //
+  //  &:hover, &.hover {
+  //    @include text-base;
+  //    background-color: transparent;
+  //    border: solid 1px $heather;
+  //  }
+  //}
+
+  &.button-warning {
+    outline-color: rgba(255,255,255,0.5);
+    @include font-medium;
+    @include button(
+            $bg-color: darken($wheat, 15%),
+            $box-shadow: rgba(0, 0, 0, 0.16),
+            $color: $white,
+            $text-shadow: rgba(0, 0, 0, 0.28)
+    );
+  }
+}

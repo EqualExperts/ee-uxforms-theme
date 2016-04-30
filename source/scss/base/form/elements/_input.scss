@@ -10,10 +10,9 @@
 // :focus       - some description
 // :active      - some description
 //
-// Style guide: Form.Element.input
+// Style guide: Form.input
 
 @import '../../../mixins/css3';
-@import '../../../icons/UX-forms';
 //@import '../../mixins/gds/conditionals';
 
 .form-control {
@@ -47,7 +46,7 @@
   //
   // .block-input - some description
   //
-  // Style guide: Form.Element.input.size
+  // Style guide: Form.input.size
   &.block-input {
     @include box-sizing(border-box);
     width: 100%;
@@ -68,7 +67,6 @@
 
       &:focus,
       &:active {
-        @include opacity(1);
         outline: none;
         outline-offset: 0;
         padding: 8px;

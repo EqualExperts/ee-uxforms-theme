@@ -36,6 +36,7 @@
 
       &:focus,
       &:active {
+        //@include opacity(1);
         border-color: $blood-orange;
       }
     }

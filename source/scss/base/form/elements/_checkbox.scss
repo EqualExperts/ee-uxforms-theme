@@ -15,7 +15,7 @@
 // :checked     - some description
 // :disabled    - some description
 //
-// Style guide: Form.Element.checkbox
+// Style guide: Form.checkbox
 
 @import '../../../icons/UX-forms';
 @import '../../../mixins/css3';
@@ -23,6 +23,7 @@
 .form-control {
 
   &[type='checkbox'] {
+
     &:not(:checked),
     &:checked {
       position: absolute;
@@ -52,44 +53,13 @@
         }
       }
     }
-  }
-
-  &[type='checkbox'] {
-    &:not(:checked) {
-      + .form-label {
-        &:after {
-          @include opacity(0);
-        }
-      }
-    }
-
-    &:checked {
-      + .form-label {
-        &:after {
-          @include opacity(1);
-        }
-      }
-    }
 
     &:disabled {
       &:not(:checked),
       &:checked {
         + .form-label {
           cursor: default;
-          &:before {
-            @include opacity(0.7);
-          }
         }
-      }
-      &:checked {
-        + .form-label {
-          &:after {
-            @include opacity(0.7);
-          }
-        }
-      }
-      + .form-label {
-        @include opacity(0.7);
       }
     }
   }

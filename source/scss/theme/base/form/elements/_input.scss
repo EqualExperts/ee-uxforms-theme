@@ -1,0 +1,43 @@
+@import '../../../variables';
+@import '../../../mixins/fonts';
+@import '../../../mixins/texts';
+@import '../../../../mixins/form';
+@import '../../../../icons/UX-forms';
+
+.form-control {
+  @include font-regular;
+  @include text-muted;
+  font-size: $default-font-size;
+  background-color: $white;
+  border-color: $heather;
+
+  @include placeholder {
+    @include font-regular;
+    @include text-muted;
+    font-size: $default-font-size;
+  };
+
+  &:focus,
+  &:active {
+    border-color: $light-grey-blue;
+  }
+}
+
+
+.form-group {
+  &.error {
+    > .form-control {
+      border-color: $blood-orange;
+
+      @include placeholder {
+        @include font-bold;
+        @include text-danger;
+      };
+
+      &:focus,
+      &:active {
+        border-color: $blood-orange;
+      }
+    }
+  }
+}

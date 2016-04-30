@@ -1,0 +1,19 @@
+// Hint
+//
+// Some description here
+//
+// Weight: 3
+//
+// Markup:
+//    <span class="form-hint">Please enter your full name</span>
+//
+// Style guide: Form.Element.hint
+.form-hint {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  > .form-hint {
+    display: block;
+  }
+}

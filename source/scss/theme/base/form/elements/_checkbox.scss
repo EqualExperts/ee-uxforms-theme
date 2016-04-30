@@ -1,0 +1,21 @@
+@import '../../../color';
+
+.form-control {
+
+  &[type='checkbox'] {
+    &:not(:checked),
+    &:checked {
+      + .form-label {
+        &:before {
+          border-color: $heather;
+          background: $white;
+        }
+
+        &:after {
+          font-size: 22px;
+          color: $sick-green;
+        }
+      }
+    }
+  }
+}

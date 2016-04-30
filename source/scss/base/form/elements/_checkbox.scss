@@ -2,33 +2,32 @@
 //
 // Some description here
 //
+// Weight: 7
+//
 // Markup:
-//  <form class="ux-forms">
 //    <div class="form-group">
-//      <input class="form-control {{modifier_class}}" id="checkbox" type="checkbox">
+//      <input class="form-control {{modifier_class}}" type="checkbox" placeholder="Firstname">
 //      <label class="form-label" for="checkbox">Yes</label>
 //    </div>
-//  </form>
 //
 // :focus       - some description
 // :active      - some description
 // :checked     - some description
 // :disabled    - some description
 //
-// Style guide: UXForms.Element.checkbox
+// Style guide: Form.Element.checkbox
 
-@import "../../colors/palette";
-@import "../../icons/UX-forms";
-@import "../../mixins/gds/css3";
+@import '../../../icons/UX-forms';
+@import '../../../mixins/css3';
 
-.ux-forms {
+.form-control {
 
-  [type="checkbox"] {
+  &[type='checkbox'] {
     &:not(:checked),
     &:checked {
       position: absolute;
       left: -9999px;
-      + label {
+      + .form-label {
         position: relative;
         padding-left: 30px;
         padding-right: 15px;
@@ -41,26 +40,23 @@
           top: -2px;
           width: 18px;
           height: 18px;
-          border: 1px solid $heather;
-          background: $white;
+          border: 1px solid;
         }
 
         &:after {
           @extend .icon;
-          content: "\6a";
+          content: '\6a';
           position: absolute;
           top: -8px;
           left: 2px;
-          font-size: 22px;
-          color: $sick-green;
         }
       }
     }
   }
 
-  [type="checkbox"] {
+  &[type='checkbox'] {
     &:not(:checked) {
-      + label {
+      + .form-label {
         &:after {
           @include opacity(0);
         }
@@ -68,7 +64,7 @@
     }
 
     &:checked {
-      + label {
+      + .form-label {
         &:after {
           @include opacity(1);
         }
@@ -78,7 +74,7 @@
     &:disabled {
       &:not(:checked),
       &:checked {
-        + label {
+        + .form-label {
           cursor: default;
           &:before {
             @include opacity(0.7);
@@ -86,13 +82,13 @@
         }
       }
       &:checked {
-        + label {
+        + .form-label {
           &:after {
             @include opacity(0.7);
           }
         }
       }
-      + label {
+      + .form-label {
         @include opacity(0.7);
       }
     }

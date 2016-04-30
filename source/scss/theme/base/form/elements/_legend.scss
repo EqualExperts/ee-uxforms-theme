@@ -1,0 +1,8 @@
+@import '../../../mixins/fonts';
+@import '../../../mixins/texts';
+
+.form-legend {
+  @include font-regular;
+  @include text-base;
+  border-bottom-color: $light-grey;
+}

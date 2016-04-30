@@ -1,0 +1,18 @@
+// Group
+//
+// Some description here
+//
+// Weight: 0
+//
+// Markup:
+//    <div class="form-group">
+//      <label class="form-label" for="full-name">Full name</label>
+//      <span class="form-hint">Your full name</span>
+//      <input class="form-control" type="text" />
+//    </div>
+//
+// Style guide: Form.Element.group
+
+.form-group {
+  padding: 15px 0;
+}

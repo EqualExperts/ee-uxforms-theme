@@ -29,9 +29,9 @@ gulp.task('kss', ['sass'], () => {
         source: SOURCE_DIR + '/scss',
         destination: TARGET_DIR + '/docs',
         mask: '*.scss',
-        css: '../stylesheets/main.css',
+        css: ['../stylesheets/main.css', '../stylesheets/theme.css'],
         homepage: '../../README.md',
-        'nav-depth': 4
+        'nav-depth': 3
     });
 });
 

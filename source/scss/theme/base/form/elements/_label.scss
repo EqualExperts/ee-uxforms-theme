@@ -1,0 +1,18 @@
+@import '../../../variables';
+@import '../../../mixins/fonts';
+@import '../../../mixins/texts';
+
+.form-label {
+  @include font-regular;
+  @include text-muted;
+  font-size: $default-font-size;
+}
+
+.form-group {
+  &.error {
+    > .form-label {
+      @include font-bold;
+      @include text-danger;
+    }
+  }
+}

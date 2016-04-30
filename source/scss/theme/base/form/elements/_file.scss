@@ -1,0 +1,33 @@
+@import '../../../variables';
+@import '../../../color';
+@import '../../../mixins/fonts';
+@import '../../../mixins/texts';
+@import '../../../../mixins/css3';
+
+.form-control {
+  &[type='file'] {
+    &:before {
+      @include font-regular;
+      @include text-muted;
+    }
+  }
+
+  &[type='file'] {
+    &::-ms-value {
+      @include font-medium;
+      font-size: $default-font-size;
+    }
+    &::-ms-browse {
+      @include font-medium;
+      background-color: $gunmetal;
+      font-size: $default-font-size;
+      color: $white;
+    }
+    &::-webkit-file-upload-button {
+      @include font-medium;
+      background-color: $gunmetal;
+      font-size: $default-font-size;
+      color: $white;
+    }
+  }
+}

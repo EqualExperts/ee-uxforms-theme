@@ -1,0 +1,79 @@
+// Input
+//
+// Some description here
+//
+// Weight: 4
+//
+// Markup:
+//    <input class="form-control {{modifier_class}}" type="text" placeholder="Firstname">
+//
+// :focus       - some description
+// :active      - some description
+//
+// Style guide: Form.Element.input
+
+@import '../../../mixins/css3';
+@import '../../../icons/UX-forms';
+//@import '../../mixins/gds/conditionals';
+
+.form-control {
+  @include border-radius(2px);
+  border: solid 1px;
+  padding: 9px;
+  margin-bottom: 10px;
+  width: 50%;
+
+  //@include media(mobile) {
+  //  width: 100%;
+  //  min-width: auto;
+  //  display: block;
+  //}
+  //min-width: $min-width + px;
+
+  &:focus,
+  &:active {
+    outline: none;
+    outline-offset: 0;
+    padding: 8px;
+    border: solid 2px;
+  }
+
+  // Sizes
+  //
+  // Some description here
+  //
+  // Markup:
+  //    <input class="form-control {{modifier_class}}" type="text" placeholder="Firstname">
+  //
+  // .block-input - some description
+  //
+  // Style guide: Form.Element.input.size
+  &.block-input {
+    @include box-sizing(border-box);
+    width: 100%;
+    min-width: auto;
+    display: inline-block;
+  }
+}
+
+.form-group {
+  &.error {
+    > .form-control {
+      padding: 8px;
+      border: solid 2px;
+
+      &.block-input {
+        width: calc(100% - 55px);
+      }
+
+      &:focus,
+      &:active {
+        @include opacity(1);
+        outline: none;
+        outline-offset: 0;
+        padding: 8px;
+        border: solid 2px;
+      }
+    }
+  }
+}

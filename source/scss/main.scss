@@ -1,5 +1,23 @@
 @import "reset";
 
-@import "roboto";
+// Form
+//
+// Some description here
+//
+// Weight: 1
+//
+// Style guide: Form
+@import "base/form/form";
 
-@import "forms/forms";
+
+// Component
+//
+// Some description here
+//
+// Weight: 2
+//
+// Style guide: Component
+@import "base/components/error";
+//@import "base/components/alert";
+//@import "base/components/button";
+//@import "base/components/progress";

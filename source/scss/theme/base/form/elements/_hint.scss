@@ -1,0 +1,17 @@
+@import '../../../variables';
+@import '../../../mixins/fonts';
+@import '../../../mixins/texts';
+
+.form-hint {
+  @include font-thin;
+  @include text-muted;
+  font-size: 12px;
+}
+
+.form-group {
+  &.error {
+    > .form-hint {
+      @include text-danger;
+    }
+  }
+}

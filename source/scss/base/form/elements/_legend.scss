@@ -1,0 +1,18 @@
+// Legend
+//
+// Some description here
+//
+// Weight: 1
+//
+// Markup:
+//    <legend class="form-legend">Login Form</legend>
+//
+// Style guide: Form.Element.legend
+
+.form-legend {
+  border-bottom: solid 3px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  display: block;
+  width: 100%;
+}

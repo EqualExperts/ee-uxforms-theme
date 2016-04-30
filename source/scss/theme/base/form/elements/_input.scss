@@ -2,6 +2,7 @@
 @import '../../../mixins/fonts';
 @import '../../../mixins/texts';
 @import '../../../mixins/form';
+@import '../../../../css3';
 
 .form-control {
   @include font-regular;
@@ -17,8 +18,15 @@
   };
 
   &:focus,
+  &:hover,
   &:active {
     border-color: $light-grey-blue;
+  }
+
+  &:disabled {
+    @include opacity(0.5);
+    border-color: $heather;
+    color: transparent;
   }
 }
 
@@ -34,6 +42,7 @@
       };
 
       &:focus,
+      &:hover,
       &:active {
         //@include opacity(1);
         border-color: $blood-orange;

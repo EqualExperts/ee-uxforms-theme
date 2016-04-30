@@ -11,6 +11,7 @@
 //    </div>
 //
 // :focus       - some description
+// :hover       - some description
 // :active      - some description
 // :checked     - some description
 // :disabled    - some description
@@ -60,7 +61,7 @@
       &:not(:checked),
       &:checked {
         + .form-label {
-          cursor: default;
+          cursor: not-allowed;
         }
       }
     }

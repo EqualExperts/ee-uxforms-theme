@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 3.7.1 (28215) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-select arrow</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard---styles" transform="translate(-816.000000, -240.000000)" fill="#000000">
+            <g id="icons" transform="translate(734.000000, 69.000000)">
+                <g id="arrow-up" transform="translate(93.500000, 183.500000) rotate(-180.000000) translate(-93.500000, -183.500000) translate(84.000000, 178.000000)">
+                    <path d="M8.05273438,6.24707031 C7.30273438,6.24707031 6.80273438,5.74707031 6.80273438,4.99707031 C6.80273438,4.24707031 7.30273438,3.74707031 8.05273438,3.74707031 L17.5527344,3.74707031 C18.3027344,3.74707031 18.8027344,4.24707031 18.8027344,4.99707031 C18.8027344,5.74707031 18.3027344,6.24707031 17.5527344,6.24707031 L8.05273438,6.24707031 Z" id="Shape" transform="translate(12.802734, 4.997070) rotate(41.000000) translate(-12.802734, -4.997070) "></path>
+                    <path d="M0.870849609,6.65014648 C0.120849609,6.65014648 -0.379150391,6.15014648 -0.379150391,5.40014648 C-0.379150391,4.65014648 0.120849609,4.15014648 0.870849609,4.15014648 L10.3708496,4.15014648 C11.1208496,4.15014648 11.6208496,4.65014648 11.6208496,5.40014648 C11.6208496,6.15014648 11.1208496,6.65014648 10.3708496,6.65014648 L0.870849609,6.65014648 Z" id="Shape" transform="translate(5.620850, 5.400146) rotate(-45.000000) translate(-5.620850, -5.400146) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,7 +8,9 @@
 //    <input class="form-control {{modifier_class}}" type="text" placeholder="Firstname">
 //
 // :focus       - some description
+// :hover       - some description
 // :active      - some description
+// :disabled    - some description
 //
 // Style guide: Form.input
 
@@ -30,11 +32,18 @@
   //min-width: $min-width + px;
 
   &:focus,
+  &:hover,
   &:active {
     outline: none;
     outline-offset: 0;
     padding: 8px;
     border: solid 2px;
+  }
+
+  &:disabled {
+    border: solid 1px;
+    padding: 9px;
+    cursor: not-allowed;
   }
 
   // Sizes
@@ -66,6 +75,7 @@
       }
 
       &:focus,
+      &:hover,
       &:active {
         outline: none;
         outline-offset: 0;

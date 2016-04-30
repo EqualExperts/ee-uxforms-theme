@@ -25,7 +25,7 @@ gulp.task('sass', () => {
 
 gulp.task('kss', ['sass'], () => {
     return kss({
-        title: 'UXForms Themes',
+        title: 'UXForms',
         source: SOURCE_DIR + '/scss',
         destination: TARGET_DIR + '/docs',
         mask: '*.scss',

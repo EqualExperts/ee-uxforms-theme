@@ -25,4 +25,7 @@ select {
     background: url(../icons/icon-select-arrow.svg) no-repeat;
     background-position: 98% 50%;
   }
+  &::-ms-expand {
+    display: none;
+  }
 }

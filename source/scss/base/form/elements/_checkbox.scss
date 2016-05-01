@@ -6,8 +6,8 @@
 //
 // Markup:
 //    <div class="form-group">
-//      <input class="form-control {{modifier_class}}" type="checkbox" placeholder="Firstname">
-//      <label class="form-label" for="checkbox">Yes</label>
+//      <input class="form-control {{modifier_class}}" type="checkbox" id="demo">
+//      <label class="form-label" for="demo">Yes</label>
 //    </div>
 //
 // :focus       - some description
@@ -22,45 +22,39 @@
 @import '../../../css3';
 
 .form-control {
-
   &[type='checkbox'] {
+    position: absolute;
+    left: -9999px;
 
-    &:not(:checked),
-    &:checked {
-      position: absolute;
-      left: -9999px;
-      + .form-label {
-        position: relative;
-        padding-left: 30px;
-        padding-right: 15px;
-        cursor: pointer;
-        &:before {
-          @include border-radius(2px);
-          content: '';
-          position: absolute;
-          left: 0;
-          top: -2px;
-          width: 18px;
-          height: 18px;
-          border: 1px solid;
-        }
+    + .form-label {
+      position: relative;
+      padding-left: 30px;
+      padding-right: 15px;
+      line-height: 20px;
+      cursor: pointer;
+      &:before {
+        @include border-radius(2px);
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid;
+      }
 
-        &:after {
-          @extend .icon;
-          content: '\6a';
-          position: absolute;
-          top: -8px;
-          left: 2px;
-        }
+      &:after {
+        @extend .icon;
+        content: '\6a';
+        position: absolute;
+        top: -5px;
+        left: 2px;
       }
     }
 
     &:disabled {
-      &:not(:checked),
-      &:checked {
-        + .form-label {
-          cursor: not-allowed;
-        }
+      + .form-label {
+        cursor: not-allowed;
       }
     }
   }

@@ -3,18 +3,25 @@
 
 .form-control {
   &[type='radio'] {
-    &:not(:checked),
-    &:checked {
+    &:focus,
+    &:hover,
+    &:active {
       + .form-label {
         &:before {
-          border-color: $heather;
-          background: $white;
+          border-color: $light-grey-blue;
         }
+      }
+    }
 
-        &:after {
-          border-color: $gunmetal;
-          background-color: $white;
-        }
+    + .form-label {
+      &:before {
+        border-color: $heather;
+        background: $white;
+      }
+
+      &:after {
+        border-color: $gunmetal;
+        background-color: $white;
       }
     }
 
@@ -35,23 +42,11 @@
     }
 
     &:disabled {
-      &:not(:checked),
-      &:checked {
-        + .form-label {
-          &:before {
-            @include opacity(0.7);
-          }
-        }
-      }
-      &:checked {
-        + .form-label {
-          &:after {
-            @include opacity(0.7);
-          }
-        }
-      }
       + .form-label {
-        @include opacity(0.7);
+        @include opacity(0.5);
+        &:before {
+          border-color: $heather;
+        }
       }
     }
   }

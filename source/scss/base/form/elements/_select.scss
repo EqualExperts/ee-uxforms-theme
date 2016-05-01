@@ -28,4 +28,8 @@ select {
   &::-ms-expand {
     display: none;
   }
+  option {
+    @include appearance(none);
+    background : none;
+  }
 }

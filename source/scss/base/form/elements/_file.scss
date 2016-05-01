@@ -18,13 +18,11 @@
 
 .form-control {
   &[type='file'] {
+    @include appearance(none);
     color: transparent;
     &:before {
       content: 'Select file';
     }
-  }
-
-  &[type='file'] {
     &::-ms-value {
       @include border-radius(2px);
       border: none;
@@ -33,9 +31,11 @@
     &::-ms-browse {
       @include border-radius(2px);
       padding: 0 20px;
+      margin-left: -5px;
       float: right;
       border: none;
       outline: none;
+      cursor: pointer;
     }
     &::-webkit-file-upload-button {
       @include border-radius(2px);
@@ -45,6 +45,8 @@
       padding: 10px 20px;
       float: right;
       border: none;
+      outline: none;
+      cursor: pointer;
     }
   }
 }

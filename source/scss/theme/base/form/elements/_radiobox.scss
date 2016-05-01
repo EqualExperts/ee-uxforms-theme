@@ -25,7 +25,8 @@
       }
     }
 
-    &:not(:checked) {
+    &:not(:checked),
+    &:not([checked]) {
       + .form-label {
         &:after {
           @include opacity(0);
@@ -33,7 +34,8 @@
       }
     }
 
-    &:checked {
+    &:checked,
+    &[checked] {
       + .form-label {
         &:after {
           @include opacity(1);
@@ -41,7 +43,8 @@
       }
     }
 
-    &:disabled {
+    &:disabled,
+    &[disabled] {
       + .form-label {
         @include opacity(0.5);
         &:before {

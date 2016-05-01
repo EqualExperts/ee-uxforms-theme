@@ -1,4 +1,7 @@
+@import '../../../color';
 
 .form-group {
-
+  &.form-group-linebreak {
+    border-bottom-color: $light-grey;
+  }
 }

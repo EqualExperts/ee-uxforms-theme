@@ -53,7 +53,8 @@
       }
     }
 
-    &:disabled {
+    &:disabled,
+    [disabled] {
       + .form-label {
         cursor: not-allowed;
       }

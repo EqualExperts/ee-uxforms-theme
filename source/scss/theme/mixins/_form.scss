@@ -1,9 +1,14 @@
-
 @mixin placeholder {
-  ::-webkit-input-placeholder,
-  :-moz-placeholder,
-  ::-moz-placeholder,
-  :-ms-input-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
     @content;
   }
 }

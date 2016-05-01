@@ -17,7 +17,6 @@
 // :disabled    - some description
 //
 // Style guide: Form.checkbox
-
 @import '../../../UX-forms';
 @import '../../../css3';
 
@@ -52,7 +51,8 @@
       }
     }
 
-    &:disabled {
+    &:disabled,
+    [disabled] {
       + .form-label {
         cursor: not-allowed;
       }

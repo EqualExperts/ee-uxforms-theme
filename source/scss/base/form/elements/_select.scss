@@ -22,14 +22,13 @@ select {
   &.form-control {
     @include appearance(none);
     height: 36px;
-    background: url(../icons/icon-select-arrow.svg) no-repeat;
-    background-position: 98% 50%;
+    background: url(../icons/icon-select-arrow.svg) no-repeat calc(100% - 10px) 50%;
   }
   &::-ms-expand {
     display: none;
   }
   option {
     @include appearance(none);
-    background : none;
+    background: none;
   }
 }

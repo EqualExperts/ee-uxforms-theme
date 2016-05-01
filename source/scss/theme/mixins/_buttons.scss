@@ -31,7 +31,7 @@
   }
 }
 
-@mixin button-group-border-color($border-color){
+@mixin button-group-border-color($border-color) {
   [class^="icon-"],
   [class*=" icon-"] {
     border-left-color: $border-color;

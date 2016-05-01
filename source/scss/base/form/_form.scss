@@ -4,8 +4,62 @@
 //
 // Weight: 1
 //
+// Markup:
+//    <fieldset>
+//      <legend class="form-legend">Sample Form</legend>
+//      <div class="form-group form-group-linebreak">
+//        <label class="form-label" for="first-name">First name</label>
+//        <span class="form-hint">Your first name</span>
+//        <input class="form-control" type="text" placeholder="First name" id="first-name" />
+//        <span class="icon icon-icon-misc-error error-icon"></span>
+//        <span class="error-message">Please provide first name</span>
+//      </div>
+//      <div class="form-group form-group-linebreak">
+//        <label class="form-label" for="last-name">Last name</label>
+//        <span class="form-hint">Your last name</span>
+//        <input class="form-control" type="text" placeholder="Last name" id="last-name" />
+//        <span class="icon icon-icon-misc-error error-icon"></span>
+//        <span class="error-message">Please provide last name</span>
+//      </div>
+//      <div class="form-group form-group-linebreak">
+//        <label class="form-label" for="address">Address</label>
+//        <span class="form-hint">Your address</span>
+//        <select class="form-control block-input" type="text" placeholder="Address" id="address">
+//          <option>1, some road, some where, some country</option>
+//          <option>2, some road, some where, some country</option>
+//        </select>
+//        <span class="icon icon-icon-misc-error error-icon"></span>
+//        <span class="error-message">Please provide address</span>
+//      </div>
+//      <div class="form-group form-group-linebreak">
+//        <label class="form-label" for="photo">Profile picture</label>
+//        <span class="form-hint">Your profile photo</span>
+//        <input class="form-control block-input" type="file" id="photo" />
+//        <span class="icon icon-icon-misc-error error-icon"></span>
+//        <span class="error-message">Please select profile photo</span>
+//      </div>
+//      <div class="form-group form-group-linebreak">
+//        <span class="form-label">Gender</span>
+//        <span class="form-hint">Your gender</span>
+//        <div class="">
+//          <input class="form-control" type="radio" id="male" checked />
+//          <label class="form-label" for="male">Male</label>
+//          <input class="form-control" type="radio" id="female" />
+//          <label class="form-label" for="female">Female</label>
+//          <span class="icon icon-icon-misc-error error-icon"></span>
+//        </div>
+//        <span class="error-message">Please select your gender</span>
+//      </div>
+//      <div class="form-group form-group-linebreak">
+//        <input class="form-control" type="checkbox" id="graduate" checked />
+//        <label class="form-label" for="graduate">Graduate</label>
+//        <input class="form-control" type="checkbox" id="master" />
+//        <label class="form-label" for="master">Master</label>
+//      </div>
+//    </fieldset>
+//    <button type="submit" class="button button-primary">Submit</button>
+//
 // Style guide: Form
-
 @import 'elements/group';
 @import 'elements/legend';
 @import 'elements/label';
@@ -15,7 +69,6 @@
 @import 'elements/radiobox';
 @import 'elements/checkbox';
 @import 'elements/select';
-
 
 .form {
 

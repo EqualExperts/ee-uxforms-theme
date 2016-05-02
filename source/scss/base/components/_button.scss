@@ -2,8 +2,25 @@
 //
 // Some description here
 //
+// Weight: 1
+//
 // Markup:
-//  <button class="button {{modifier_class}}">Button<i class="icon-icon-control-print"></i></button>
+//  <button class="button {{modifier_class}}">Button</button>
+//  <button class="button button-icon {{modifier_class}}">
+//      <i class="icon-icon-control-print"></i>
+//  </button>
+//  <button class="button button-icon-after {{modifier_class}}">
+//      Button
+//      <i class="icon-icon-control-print"></i>
+//  </button>
+//  <button class="button button-icon-before {{modifier_class}}">
+//    <i class="icon-icon-control-print"></i>
+//    Button
+//  </button>
+//  <button class="button button-curve {{modifier_class}}">Button</button>
+//  <button class="button button-link {{modifier_class}}">Button</button>
+//  <button class="button button-primary {{modifier_class}}">Button</button>
+//  <button class="button button-secondary {{modifier_class}}">Button</button>
 //
 // :hover       - some description
 // :focus       - some description
@@ -17,7 +34,7 @@
   @include border-radius(2px);
   white-space: nowrap;
   cursor: pointer;
-  padding: 7.5px 20px;
+  padding: 8.5px 20px;
   text-decoration: none;
 
   &.disabled,
@@ -31,47 +48,123 @@
     outline: none;
   }
 
-  [class^="icon-"],
-  [class*=" icon-"] {
-    &:before {
-      padding: 0 5px;
-    }
-  }
-
   // Sizes
   //
   // Some description here
   //
+  // Weight: 2
+  //
   // Markup:
   //  <button class="button {{modifier_class}}">Button</button>
+  //  <button class="button button-icon {{modifier_class}}">
+  //      <i class="icon-icon-control-print"></i>
+  //  </button>
+  //  <button class="button button-icon-after {{modifier_class}}">
+  //      Button
+  //      <i class="icon-icon-control-print"></i>
+  //  </button>
+  //  <button class="button button-icon-before {{modifier_class}}">
+  //    <i class="icon-icon-control-print"></i>
+  //    Button
+  //  </button>
+  //  <button class="button button-curve {{modifier_class}}">Button</button>
+  //  <button class="button button-link {{modifier_class}}">Button</button>
+  //  <button class="button button-primary {{modifier_class}}">Button</button>
+  //  <button class="button button-secondary {{modifier_class}}">Button</button>
   //
-  // .button-large - some description
-  // .button-small - some description
+  // .button-x-small  - some description
+  // .button-small    - some description
+  // .button-large    - some description
   //
   // Style guide: Button.size
   &.button-large {
-    padding: 10px 30px;
+    padding: 11px 25px;
   }
 
   &.button-small {
-    padding: 6px 15px;
+    padding: 6px 12px;
+  }
+
+  &.button-x-small {
+    padding: 3px 10px;
   }
 
   // Types
   //
   // Some description here
   //
-  // Markup:
-  //  <button class="button {{modifier_class}}">Button</button>
+  // Weight: 3
   //
-  // .button-primary    - some description
-  // .button-secondary  - some description
+  // Markup:
+  //  <button class="button button-x-small {{modifier_class}}">Button</button>
+  //  <a href="#" class="button button-x-small {{modifier_class}}">Button</a>
+  //
+  // .button-link    - some description
+  // .button-curve   - some description
   //
   // Style guide: Button.type
-  &.button-primary {
+  &.button-link {
+    border-color: transparent;
+    text-decoration: underline;
   }
 
-  &.button-secondary {
-    outline: auto 5px;
+  &.button-curve {
+    @include border-radius(15px);
+    border: solid 1px;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border: solid 1px;
+    }
+  }
+
+  // Icons Button
+  //
+  // Some description here
+  //
+  // Weight: 4
+  //
+  // Markup:
+  //  <button class="button button-small button-icon-after">
+  //      Button
+  //      <i class="icon-icon-control-print"></i>
+  //  </button>
+  //  <button class="button button-small button-icon-before">
+  //    <i class="icon-icon-control-print"></i>
+  //    Button
+  //  </button>
+  //
+  // Style guide: Button.icon
+  &.button-icon {
+    padding: 8.5px 9.5px;
+    &.button-large {
+      padding: 11px 12px;
+    }
+
+    &.button-small {
+      padding: 6px 7px;
+    }
+
+    &.button-x-small {
+      padding: 3px 4px;
+    }
+  }
+
+  &.button-icon-after {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      &:before {
+        margin-left: 10px;
+      }
+    }
+  }
+  &.button-icon-before {
+    [class^="icon-"],
+    [class*=" icon-"] {
+      &:before {
+        margin-right: 10px;
+      }
+    }
   }
 }

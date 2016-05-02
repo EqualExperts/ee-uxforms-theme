@@ -1,0 +1,60 @@
+// Themes
+//
+// Some description here
+//
+// Markup:
+//  <div class="collapsible {{modifier_class}}">
+//    <div class="collapsible-heading">
+//      Ben Hayward
+//    </div>
+//    <div class="collapsible-body">
+//      ....
+//    </div>
+//  </div>
+//
+// .collapsible-open   -   some description
+//
+// Style guide: Collapsible.themes
+
+@import '../../color';
+@import '../../mixins/fonts';
+@import '../../mixins/texts';
+@import '../../mixins/buttons';
+@import '../../../css3';
+
+.collapsible {
+  background-color: $white;
+  border-color: $lightest-grey;
+
+  &:hover {
+    @include box-shadow(0 0 1px 1px $light-grey);
+    border-color: $light-grey;
+  }
+
+  &.collapsible-open {
+    border-color: $slate;
+    &:hover {
+      border-color: $slate;
+    }
+  }
+
+  //&.error {
+  //  border-color: $wheat;
+  //  &:hover {
+  //    border-color: $wheat;
+  //  }
+  //}
+
+  .collapsible-heading {
+    @include font-regular;
+    @include font-size-big;
+    @include text-default;
+  }
+
+  .collapsible-body {
+    @include font-regular;
+    @include font-size;
+    @include text-default;
+    background-color: $pale-grey;
+  }
+}

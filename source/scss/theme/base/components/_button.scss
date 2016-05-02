@@ -1,3 +1,17 @@
+// Styles
+//
+// Some description here
+//
+// Weight: 5
+//
+// Markup:
+//  <button class="button {{modifier_class}}">Button</button>
+//  <a href="#" class="button {{modifier_class}}">Button</a>
+//
+// .button-primary    - some description
+// .button-secondary  - some description
+//
+// Style guide: Button.styles
 @import '../../color';
 @import '../../mixins/fonts';
 @import '../../mixins/texts';
@@ -15,6 +29,7 @@
 
   &.disabled,
   &[disabled] {
+    @include opacity(0.7);
     &:hover,
     &:focus,
     &:active {
@@ -34,9 +49,47 @@
     );
   }
 
-  &.disabled,
-  &[disabled] {
-    @include opacity(0.7);
+  &.button-link {
+    color: $slate;
+    &.disabled,
+    &[disabled] {
+      @include opacity(0.7);
+      &:hover,
+      &:focus,
+      &:active {
+        @include button(
+                $border-color: transparent,
+                $color: $heather
+        );
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include button(
+              $border-color: transparent,
+              $color: $gunmetal
+      );
+    }
+  }
+
+  &.button-curve {
+    @include font-medium;
+    @include text-muted;
+    border-color: $lightest-grey;
+    background-color: $lightest-grey;
+
+    &:active {
+      @include text-default;
+    }
+
+    &:hover,
+    &:focus {
+      @include text-default;
+      background-color: transparent;
+      border-color: $heather;
+    }
   }
 
   &.button-primary {
@@ -60,31 +113,12 @@
     &:hover,
     &:focus,
     &:active {
-      @include button($bg-color: $dark-shadow-grey-blue);
+      @include button($bg-color: $dark-shadow-grey-blue, $color: $light-white);
     }
   }
 
-  //&.button-capsule {
-  //  @include font-medium;
-  //  @include text-muted;
-  //  @include border-radius(15px);
-  //  padding: 2px 10px;
-  //  border: solid 1px $lightest-grey;
-  //  background-color: $lightest-grey;
-  //
-  //  &:active, &.active {
-  //    @include text-base;
-  //  }
-  //
-  //  &:hover, &.hover {
-  //    @include text-base;
-  //    background-color: transparent;
-  //    border: solid 1px $heather;
-  //  }
-  //}
-
   &.button-secondary {
-    outline-color: rgba(255, 255, 255, 0.5);
+    //outline-color: rgba(255, 255, 255, 0.5);
     @include font-medium;
     @include button(
             $bg-color: darken($wheat, 15%),
@@ -92,5 +126,11 @@
             $color: $white,
             $text-shadow: rgba(0, 0, 0, 0.28)
     );
+
+    &:hover,
+    &:focus,
+    &:active {
+      @include button($color: $white);
+    }
   }
 }

@@ -1,11 +1,10 @@
-@import '../../../variables';
 @import '../../../mixins/fonts';
 @import '../../../mixins/texts';
 
 .form-hint {
   @include font-thin;
+  @include font-size-small;
   @include text-muted;
-  font-size: 12px;
 }
 
 .form-group {

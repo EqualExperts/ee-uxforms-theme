@@ -3,7 +3,7 @@
 
 .form-legend {
   @include font-regular;
-  @include text-base;
+  @include text-default;
   border-bottom-color: $light-grey;
   font-size: 25px;
 }

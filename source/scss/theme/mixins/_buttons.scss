@@ -30,10 +30,3 @@
     text-shadow: 0 1px 1px $text-shadow;
   }
 }
-
-@mixin button-group-border-color($border-color) {
-  [class^="icon-"],
-  [class*=" icon-"] {
-    border-left-color: $border-color;
-  }
-}

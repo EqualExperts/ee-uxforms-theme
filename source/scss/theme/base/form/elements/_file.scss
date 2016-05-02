@@ -1,4 +1,3 @@
-@import '../../../variables';
 @import '../../../color';
 @import '../../../mixins/fonts';
 @import '../../../mixins/texts';
@@ -12,19 +11,19 @@
     }
     &::-ms-value {
       @include font-medium;
-      font-size: $default-font-size;
+      @include font-size;
     }
     &::-ms-browse {
       @include font-medium;
+      @include font-size;
       background-color: $gunmetal;
-      font-size: $default-font-size;
       color: $white;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
     }
     &::-webkit-file-upload-button {
       @include font-medium;
+      @include font-size;
       background-color: $gunmetal;
-      font-size: $default-font-size;
       color: $white;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
     }

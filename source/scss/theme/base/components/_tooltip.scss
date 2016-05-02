@@ -1,11 +1,10 @@
 @import '../../color';
-@import '../../variables';
 @import '../../mixins/fonts';
 @import '../../mixins/texts';
 
 .tooltip {
   @include font-regular;
-  font-size: $default-font-size;
+  @include font-size;
   color: $white;
   background-color: $heather;
   &:before {

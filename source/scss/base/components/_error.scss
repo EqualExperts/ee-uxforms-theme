@@ -1,12 +1,13 @@
-// Error
+// Error/Validation
 //
 // Some description here
-//
-// Weight: 0
 //
 // Markup:
 //    <fieldset>
 //      <legend class="form-legend">Sample Form</legend>
+//      <div class="error-summary">
+//        Following form is invalid, Please provide the following details.
+//      </div>
 //      <div class="form-group form-group-linebreak error">
 //        <label class="form-label" for="first-name">First name</label>
 //        <span class="form-hint">Your first name</span>

@@ -1,4 +1,3 @@
-@import '../../variables';
 @import '../../mixins/fonts';
 @import '../../mixins/texts';
 
@@ -8,15 +7,15 @@
 
 .error-summary {
   @include font-bold;
+  @include font-size;
   @include text-danger;
-  font-size: $default-font-size;
   background-color: $wheat;
 }
 
 .error-message {
   @include font-bold;
+  @include font-size;
   @include text-danger;
-  font-size: $default-font-size;
 }
 
 .error-icon {

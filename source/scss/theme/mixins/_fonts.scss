@@ -24,3 +24,12 @@ $default-font-family: Roboto;
   font-family: $default-font-family;
   font-weight: 700;
 }
+
+
+@mixin font-size {
+  font-size: 14px;
+}
+
+@mixin font-size-small {
+  font-size: 12px;
+}

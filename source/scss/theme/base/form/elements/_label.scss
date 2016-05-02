@@ -1,11 +1,10 @@
-@import '../../../variables';
 @import '../../../mixins/fonts';
 @import '../../../mixins/texts';
 
 .form-label {
   @include font-regular;
+  @include font-size;
   @include text-muted;
-  font-size: $default-font-size;
 }
 
 .form-group {

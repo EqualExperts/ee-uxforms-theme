@@ -1,4 +1,3 @@
-@import '../../../variables';
 @import '../../../mixins/fonts';
 @import '../../../mixins/texts';
 @import '../../../mixins/form';
@@ -6,15 +5,15 @@
 
 .form-control {
   @include font-regular;
+  @include font-size;
   @include text-muted;
-  font-size: $default-font-size;
   background-color: $white;
   border-color: $heather;
 
   @include placeholder {
     @include font-regular;
+    @include font-size;
     @include text-muted;
-    font-size: $default-font-size;
   }
 
   &:focus,

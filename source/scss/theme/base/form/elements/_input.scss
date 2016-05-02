@@ -25,7 +25,7 @@
 
   &:disabled,
   &[disabled] {
-    @include opacity(0.5);
+    @include opacity(0.7);
     border-color: $heather;
     color: transparent;
   }
@@ -33,14 +33,14 @@
 
 .form-group {
   &.error {
-    > .form-control {
+    .form-control {
       @include text-danger;
       @include placeholder {
         @include font-thin;
         @include text-danger;
       }
       border-color: $blood-orange;
-      
+
       &:focus,
       &:hover,
       &:active {

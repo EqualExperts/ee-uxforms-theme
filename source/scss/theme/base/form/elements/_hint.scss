@@ -10,7 +10,7 @@
 
 .form-group {
   &.error {
-    > .form-hint {
+    .form-hint {
       @include text-danger;
     }
   }

@@ -60,7 +60,7 @@
 
 .form-group {
   &.error {
-    > .form-control {
+    .form-control {
       padding: 8px;
       border: solid 2px;
 

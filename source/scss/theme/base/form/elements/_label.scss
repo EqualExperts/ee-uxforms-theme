@@ -10,7 +10,7 @@
 
 .form-group {
   &.error {
-    > .form-label {
+    .form-label {
       @include font-bold;
       @include text-danger;
     }

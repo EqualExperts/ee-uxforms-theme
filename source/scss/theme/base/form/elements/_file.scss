@@ -10,9 +10,6 @@
       @include font-regular;
       @include text-muted;
     }
-  }
-
-  &[type='file'] {
     &::-ms-value {
       @include font-medium;
       font-size: $default-font-size;
@@ -30,6 +27,22 @@
       font-size: $default-font-size;
       color: $white;
       text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+    }
+  }
+}
+
+.form-group {
+  &.error {
+    .form-control {
+      &[type='file'] {
+        color: transparent;
+        &:before {
+          @include text-danger;
+        }
+        &::-webkit-file-upload-button {
+          background-color: $blood-orange;
+        }
+      }
     }
   }
 }

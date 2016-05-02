@@ -46,7 +46,7 @@
     &:disabled,
     &[disabled] {
       + .form-label {
-        @include opacity(0.5);
+        @include opacity(0.7);
         &:before {
           border-color: $heather;
         }

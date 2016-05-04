@@ -1,0 +1,21 @@
+// Footer
+//
+// Some description here
+//
+// Markup:
+//  <footer class="footer">
+//    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+//    Equal Experts
+//  </footer>
+//
+// Style guide: Footer
+@import '../color';
+
+.footer {
+  font-family: Lato;
+  font-weight: 300;
+  font-size: 14px;
+  color: $boulder;
+  text-align: center;
+  padding: 20px;
+}

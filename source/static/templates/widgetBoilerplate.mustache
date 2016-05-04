@@ -1,4 +1,4 @@
-<div class="form-group form-group-linebreak {{#validationMessages}} error {{/validationMessages}} {{#hidden}} hidden {{/hidden}} {{#forRadioButtons}} selectable-list {{/forRadioButtons}}" id="{{widgetId}}">
+<div class="form-group {{#validationMessages}} error {{/validationMessages}} {{#hidden}} hidden {{/hidden}} {{#forRadioButtons}} selectable-list {{/forRadioButtons}}" id="{{widgetId}}">
 	{{#fieldset}}
   	<fieldset class="{{#displayAsRow}} inline {{/displayAsRow}}">
 	{{/fieldset}}
@@ -10,10 +10,6 @@
     {{/hasHint}}
 
     {{ > widget }}
-
-    {{#validationMessages}}
-        <span class="icon icon-icon-misc-error error-icon"></span>
-    {{/validationMessages}}
 
     {{#fieldset}}
   	</fieldset>

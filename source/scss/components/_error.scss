@@ -98,36 +98,39 @@
 //    <button type="submit" class="button button-primary">Submit</button>
 //
 // Style guide: Error
+@import "../color";
 
 .error {
   > .error-message {
     display: block;
-    &.error-message-inline {
-      display: inline-block;
-    }
   }
-  > .error-icon {
-    display: inline-block;
+  > .error-summary {
+    display: block;
   }
 }
 
 .error-summary {
-  padding: 15px;
+  padding: 0 18px;
   margin-bottom: 20px;
-  display: block;
+
   li {
-    margin-left: 20px;
-    margin-bottom: 5px;
+    list-style-type: disc;
+    a {
+      font-family: Lato;
+      font-size: 14px;
+      color: $red;
+      margin-bottom: 2px;
+      display: block;
+      text-decoration: none;
+    }
   }
 }
 
 .error-message {
+  font-family: Lato;
+  font-size: 14px;
+  color: $red;
   display: none;
+  text-align: right;
   margin-bottom: 10px;
-}
-
-.error-icon {
-  margin-left: 10px;
-  display: none;
-  vertical-align: middle;
 }

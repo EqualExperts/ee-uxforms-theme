@@ -1,0 +1,32 @@
+// Header
+//
+// Some description here
+//
+// Markup:
+//  <header class="header {{modifier_class}}">
+//    Equal Experts
+//  </header>
+//
+// .header--fixed-top   -   some description
+//
+// Style guide: Header
+@import '../color';
+
+.header {
+  background-color: $blue;
+  box-shadow: inset 0 -2px 4px rgba(128, 128, 128, 0.4);
+  padding: 20px;
+
+  &.header--fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .header__logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+}

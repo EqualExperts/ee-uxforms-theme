@@ -8,11 +8,32 @@
 //    <legend class="form-legend">Login Form</legend>
 //
 // Style guide: Form.legend
+@import "../../color";
 
 .form-legend {
-  border-bottom: solid 2px;
   padding-bottom: 10px;
-  margin-bottom: 20px;
-  display: block;
+  margin-bottom: 30px;
   width: 100%;
+  display: block;
+
+  font-family: Montserrat;
+  text-align: center;
+  color: $slate-grey;
+
+  >:first-child {
+    font-size: 40px;
+    padding: 5px;
+    color: $light-blue;
+    span {
+      font-weight: 700;
+      color: $red;
+    }
+  }
+  >:last-child {
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 22px;
+    padding: 5px;
+    color: $grey;
+  }
 }

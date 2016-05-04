@@ -5,27 +5,19 @@
 // Weight: 0
 //
 // Markup:
-//    <div class="form-group {{modifier_class}}">
-//      <label class="form-label" for="full-name">Full name</label>
-//      <span class="form-hint">Your full name</span>
+//    <div class="form-group">
+//      <label class="form-label" for="Name">Name</label>
 //      <input class="form-control" type="text" />
 //    </div>
 //
-// .form-group-linebreak  -   some description
-//
 // Style guide: Form.group
+@import "../../color";
 
 .form-group {
   margin-bottom: 10px;
-  padding: 5px 10px;
+  padding: 10px 20px;
 
-  &.form-group-linebreak {
-    //padding-bottom: 10px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-  }
-}
-
-.form-group-item {
-  display: inline-block;
+  background-color: $white;
+  border-top: 2px solid $bombay;
+  border-bottom: 2px solid $bombay;
 }

@@ -1,30 +1,44 @@
 @import 'reset';
 
-@import 'form/form';
+@import 'color';
+@import 'helpers';
 
+@import "fonts/lato";
+@import "fonts/montserrat";
+
+@import 'form/form';
+@import "components/header";
+@import "components/footer";
 @import 'components/error';
 @import 'components/button';
-@import 'components/progress';
-@import 'components/tooltip';
 
-@import 'theme';
-@import 'theme/color';
+
+
+//@import 'theme';
+//@import 'theme/color';
 
 
 body {
   height: 100vh;
-  background-color: $lightest-grey;
-  margin: 0;
-  padding: 0;
+  background-color: $stone !important;
 }
 
-.logo {
-  background-color: $primary;
-  box-shadow: inset 0 -2px 4px rgba(128, 128, 128, 0.4);
-  a {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-  }
+.container {
+  padding: 130px 20px 20px 20px;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 30px;
+  color: $slate-grey;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: Lato;
+  font-size: 14px;
+  color: $boulder;
+  padding: 10px 0;
+  margin-bottom: 10px;
 }

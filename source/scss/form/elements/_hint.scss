@@ -10,11 +10,12 @@
 // Style guide: Form.hint
 
 .form-hint {
-  margin-bottom: 10px;
+  display: none !important;
+  //margin-bottom: 10px;
 }
-
-.form-group {
-  .form-hint {
-    display: block;
-  }
-}
+//
+//.form-group {
+//  .form-hint {
+//    display: block;
+//  }
+//}

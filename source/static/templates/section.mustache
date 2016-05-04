@@ -1,5 +1,7 @@
 
-<form method="post" action="{{ postAction }}" class="form {{#hasValidationErrors}} error {{/hasValidationErrors}}">
+<form method="post"
+      action="{{ postAction }}"
+      class="form {{#hasValidationErrors}} error {{/hasValidationErrors}}">
 
     <legend class="form-legend">{{{sectionTitle}}}</legend>
 
@@ -17,7 +19,7 @@
 
     {{{ widgets }}}
 
-	<button class="button button-block button-large">
+	<button class="button button-block">
 		{{^isLastSection}}
 			{{continueButton}}
 		{{/isLastSection}}

@@ -1,0 +1,34 @@
+// Select
+//
+// Some description here
+//
+// Weight: 4
+//
+// Markup:
+//    <select class="form-control {{modifier_class}}">
+//      <option>Here is the first option</option>
+//      <option>The second option</option>
+//    </select>
+//
+// :focus       - some description
+// :hover       - some description
+// :active      - some description
+// :disabled    - some description
+//
+// Style guide: Form.select
+@import '../../css3';
+
+select {
+  &.form-control {
+    @include appearance(none);
+    height: 36px;
+    background: url(../icons/icon-select-arrow.svg) no-repeat calc(100% - 10px) 50%;
+  }
+  &::-ms-expand {
+    display: none;
+  }
+  option {
+    @include appearance(none);
+    background: none;
+  }
+}

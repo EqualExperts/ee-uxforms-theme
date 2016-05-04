@@ -1,21 +1,23 @@
 
-<h1 class="form-title heading-large">{{sectionTitle}}</h1>
-	{{ #hasValidationErrors }}
-		<div class="validation-summary">
-    	<h1 class="form-label-bold">{{ errorTitle }}</h1>
-      	<ol>
-        	{{ #validationErrors }}
-						<li><a href="#{{widgetId}}">{{validationMessage}}</a></li>
-					{{ /validationErrors }}
-				</ol>
-		</div>
-	{{ /hasValidationErrors }}
+<form method="post" action="{{ postAction }}" class="form {{#hasValidationErrors}} error {{/hasValidationErrors}}">
 
-	<form method="post" action="{{ postAction }}" class="form">
+    <legend class="form-legend">{{sectionTitle}}</legend>
 
-	{{{ widgets }}}
+    {{ #hasValidationErrors }}
+    <div class="error-summary">
+        <h1 class="error-title">{{ errorTitle }}</h1>
+        <ol>
+            {{ #validationErrors }}
+            <li><a href="#{{widgetId}}">{{validationMessage}}</a></li>
+            {{ /validationErrors }}
+        </ol>
+    </div>
+    {{ /hasValidationErrors }}
 
-	<button class="button">
+
+    {{{ widgets }}}
+
+	<button class="button button-block button-large">
 		{{^isLastSection}}
 			{{continueButton}}
 		{{/isLastSection}}

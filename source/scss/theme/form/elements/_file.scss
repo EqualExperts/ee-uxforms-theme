@@ -1,0 +1,47 @@
+@import '../../color';
+@import '../../mixins/fonts';
+@import '../../mixins/texts';
+@import '../../../css3';
+
+.form-control {
+  &[type='file'] {
+    &:before {
+      @include font-regular;
+      @include text-muted;
+    }
+    &::-ms-value {
+      @include font-medium;
+      @include font-size;
+    }
+    &::-ms-browse {
+      @include font-medium;
+      @include font-size;
+      background-color: $gunmetal;
+      color: $white;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+    }
+    &::-webkit-file-upload-button {
+      @include font-medium;
+      @include font-size;
+      background-color: $gunmetal;
+      color: $white;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+    }
+  }
+}
+
+.form-group {
+  &.error {
+    .form-control {
+      &[type='file'] {
+        color: transparent;
+        &:before {
+          @include text-danger;
+        }
+        &::-webkit-file-upload-button {
+          background-color: $blood-orange;
+        }
+      }
+    }
+  }
+}

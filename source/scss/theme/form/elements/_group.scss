@@ -1,0 +1,10 @@
+@import '../../color';
+
+.form-group {
+  background-color: $white;
+
+  &.form-group-linebreak {
+    border-top-color: $light-grey;
+    border-bottom-color: $light-grey;
+  }
+}

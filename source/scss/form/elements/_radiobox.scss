@@ -1,0 +1,63 @@
+// Radio
+//
+// Some description here
+//
+// Weight: 8
+//
+// Markup:
+//    <div class="form-group">
+//      <input class="form-control {{modifier_class}}" id="radio" type="radio">
+//      <label class="form-label" for="radio">Yes</label>
+//    </div>
+//
+// :focus       - some description
+// :hover       - some description
+// :active      - some description
+// :checked     - some description
+// :disabled    - some description
+//
+// Style guide: Form.radio
+@import '../../css3';
+
+.form-control {
+  &[type='radio'] {
+    position: absolute;
+    left: -9999px;
+
+    + .form-label {
+      position: relative;
+      padding-left: 30px;
+      padding-right: 15px;
+      line-height: 20px;
+      cursor: pointer;
+      &:before {
+        @include border-radius(50%);
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid;
+      }
+
+      &:after {
+        @include border-radius(50%);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border: 7px solid;
+      }
+    }
+
+    &:disabled,
+    [disabled] {
+      + .form-label {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

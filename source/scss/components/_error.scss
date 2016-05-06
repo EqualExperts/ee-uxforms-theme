@@ -3,108 +3,39 @@
 // Some description here
 //
 // Markup:
+//  <form class="error">
 //    <fieldset>
 //      <legend class="form-legend">Sample Form</legend>
 //      <div class="error-summary">
 //        Following form is invalid, Please provide the following details.
 //      </div>
-//      <div class="form-group form-group-linebreak error">
+//      <div class="form-group error">
 //        <label class="form-label" for="first-name">First name</label>
-//        <span class="form-hint">Your first name</span>
 //        <input class="form-control" type="text" placeholder="First name" id="first-name" />
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please provide first name</span>
 //      </div>
-//      <div class="form-group form-group-linebreak error">
+//      <span class="error-message">Please provide first name</span>
+//      <div class="form-group error">
 //        <label class="form-label" for="last-name">Last name</label>
-//        <span class="form-hint">Your last name</span>
 //        <input class="form-control" type="text" placeholder="Last name" id="last-name" />
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please provide last name</span>
 //      </div>
-//      <div class="form-group form-group-linebreak error">
+//      <span class="error-message">Please provide last name</span>
+//      <div class="form-group error">
 //        <label class="form-label" for="email">Email Address</label>
-//        <span class="form-hint">Your email address</span>
 //        <input class="form-control" type="text" placeholder="Email address" id="email" />
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please provide email address</span>
 //      </div>
-//      <div class="form-group form-group-linebreak error">
-//        <label class="form-label" for="address">Address</label>
-//        <span class="form-hint">Your address</span>
-//        <select class="form-control" type="text" placeholder="Address" id="address">
-//          <option>1, some road, some where, some country</option>
-//          <option>2, some road, some where, some country</option>
-//        </select>
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please provide address</span>
-//      </div>
-//      <div class="form-group form-group-linebreak error">
-//        <label class="form-label" for="photo">Profile picture</label>
-//        <span class="form-hint">Your profile photo</span>
-//        <input class="form-control" type="file" id="photo" />
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please select profile photo</span>
-//      </div>
-//      <div class="form-group form-group-linebreak error">
-//        <span class="form-label">Gender</span>
-//        <span class="form-hint">Your gender</span>
-//        <div class="form-group-item">
-//          <input class="form-control" type="radio" id="male" checked />
-//          <label class="form-label">Male</label>
-//        </div>
-//        <div class="form-group-item">
-//          <input class="form-control" type="radio" id="female" />
-//          <label class="form-label form-label-inline">Female</label>
-//        </div>
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please select your gender</span>
-//      </div>
-//      <div class="form-group form-group-linebreak error">
-//        <span class="form-label">Subscribe</span>
-//        <span class="form-hint">subscribe to newsletter</span>
-//        <input class="form-control" type="radio" id="yes" checked />
-//        <label class="form-label" >Yes</label>
-//        <input class="form-control" type="radio" id="no" />
-//        <label class="form-label">No</label>
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message error-message-inline">Please subscribe</span>
-//      </div>
-//      <div class="form-group form-group-linebreak error">
-//        <span class="form-label">Qualification</span>
-//        <span class="form-hint">Your qualification</span>
-//        <div class="form-group-item">
-//          <input class="form-control" type="checkbox" id="graduate" checked />
-//          <label class="form-label form-label-inline" for="graduate">Graduate</label>
-//        </div>
-//        <div class="form-group-item">
-//          <input class="form-control" type="checkbox" id="master" />
-//          <label class="form-label form-label-inline" for="master">Master</label>
-//        </div>
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message">Please select your qualification</span>
-//      </div>
-//      <div class="form-group form-group-linebreak error">
-//        <span class="form-label">Employed</span>
-//        <span class="form-hint">Your employment status</span>
-//        <input class="form-control" type="checkbox" id="yes" checked />
-//        <label class="form-label" >Yes</label>
-//        <input class="form-control" type="checkbox" id="no" />
-//        <label class="form-label">No</label>
-//        <span class="icon icon-icon-misc-error error-icon"></span>
-//        <span class="error-message error-message-inline">Please select your employment status</span>
-//      </div>
+//      <span class="error-message">Please provide email address</span>
 //    </fieldset>
 //    <button type="submit" class="button button-primary">Submit</button>
+// </form>
 //
 // Style guide: Error
 @import "../color";
 
 .error {
-  > .error-message {
+  .error-message {
     display: block;
   }
-  > .error-summary {
+  .error-summary {
     display: block;
   }
 }
@@ -112,6 +43,9 @@
 .error-summary {
   padding: 0 18px;
   margin-bottom: 20px;
+  font-family: Lato;
+  font-size: 14px;
+  color: $red;
 
   li {
     list-style-type: disc;

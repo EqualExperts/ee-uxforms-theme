@@ -12,30 +12,15 @@
 //      </legend>
 //      <div class="form-group">
 //        <label class="form-label" for="first-name">First name</label>
-//        <span class="form-hint">Your first name</span>
 //        <input class="form-control" type="text" placeholder="First name" id="first-name" />
-//        <span class="error-message">Please provide first name</span>
 //      </div>
 //      <div class="form-group">
 //        <label class="form-label" for="last-name">Last name</label>
-//        <span class="form-hint">Your last name</span>
 //        <input class="form-control" type="text" placeholder="Last name" id="last-name" />
-//        <span class="error-message">Please provide last name</span>
 //      </div>
 //      <div class="form-group">
 //        <label class="form-label" for="email">Email Address</label>
-//        <span class="form-hint">Your email address</span>
 //        <input class="form-control" type="text" placeholder="Email address" id="email" />
-//        <span class="error-message">Please provide email address</span>
-//      </div>
-//      <div class="form-group">
-//        <label class="form-label" for="address">Address</label>
-//        <span class="form-hint">Your address</span>
-//        <select class="form-control" type="text" placeholder="Address" id="address">
-//          <option>1, some road, some where, some country</option>
-//          <option>2, some road, some where, some country</option>
-//        </select>
-//        <span class="error-message">Please provide address</span>
 //      </div>
 //    </fieldset>
 //    <button type="submit" class="button button-block">Submit</button>
@@ -44,12 +29,7 @@
 @import 'elements/group';
 @import 'elements/legend';
 @import 'elements/label';
-//@import 'elements/hint';
 @import 'elements/input';
-//@import 'elements/file';
-//@import 'elements/radiobox';
-//@import 'elements/checkbox';
-//@import 'elements/select';
 
 .form {
 

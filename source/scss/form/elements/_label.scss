@@ -15,15 +15,8 @@
   display: inline-block;
   cursor: pointer;
   font-family: Lato;
-  font-weight: 700;
-  color: $grey;
-  width: 20%;
-}
-
-.form-group {
-  &.error {
-    .form-label {
-      color: $red;
-    }
-  }
+  font-weight: 400;
+  color: $label-color;
+  width: 15%;
+  font-size: 1.125em; //18/16
 }

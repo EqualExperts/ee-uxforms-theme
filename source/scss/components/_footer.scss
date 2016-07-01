@@ -14,8 +14,12 @@
 .footer {
   font-family: Lato;
   font-weight: 300;
-  font-size: 14px;
   color: $boulder;
   text-align: center;
   padding: 20px;
+
+  p {
+    font-size: 13px;
+    line-height: 1.5em;
+  }
 }

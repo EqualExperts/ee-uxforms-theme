@@ -1,5 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const del = require('del');
 const runSequence = require('run-sequence');
 const zip = require('gulp-zip');
@@ -21,6 +24,16 @@ gulp.task('sass', () => {
         .pipe(sass())
         .pipe(gulp.dest(TARGET_DIR + '/stylesheets'))
         .pipe(connect.reload());
+});
+
+gulp.task('autoprefix', function() {
+  const processors = [
+        autoprefixer({browsers: ['last 4 versions']}),
+        cssnano()
+      ];
+  return gulp.src(TARGET_DIR + '/stylesheets/*.css')
+      .pipe(postcss(processors))
+      .pipe(gulp.dest(TARGET_DIR + '/stylesheets'));
 });
 
 gulp.task('kss', ['sass'], () => {
@@ -66,7 +79,7 @@ gulp.task('watch', () => {
 });
 
 gulp.task('default', ['clean'], (d) => {
-    return runSequence('kss', 'static', 'connect', 'watch', d);
+    return runSequence('kss', 'autoprefix', 'static', 'connect', 'watch', d);
 });
 
 gulp.task('build', ['clean'], (d) => {

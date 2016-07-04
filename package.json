@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "description": "A set of css, images and javascript to implement Equal Experts' styles on uxforms",
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "cssnano": "^3.7.1",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^3.2.3",
+    "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.1",
-    "gulp-zip": "^3.2.0",
     "gulp-watch": "^4.3.5",
+    "gulp-zip": "^3.2.0",
     "kss": "^3.0.0-beta.2",
     "run-sequence": "^1.1.5"
   }
